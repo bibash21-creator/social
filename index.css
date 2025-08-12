@@ -41,7 +41,7 @@ body{
     height: auto;
     background: var(--box-color);
     text-align: center;
-    padding-block: clamp(0.3em, 1em, 1em);
+    padding-block: clamp(0.3em, 1.35em, 1em);
     padding-inline: clamp(0.3em, 1.2em, 2em);
     /* flex-shrink: 0; */
 }
