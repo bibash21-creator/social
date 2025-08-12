@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-bg-color:  hsl(0, 0%, 8%);
+    --title-color: hsl(0, 0%, 100%);
+    --links-color: hsl(0, 0%, 100%);
+    --p-color: hsl(0, 0%, 12%);
+    --span-color: hsl(75, 94%, 57%);
+    --active-color: hsl(75, 94%, 57%);
+    --box-color: hsl(0, 0%, 12%);
+    --links-box-color:  hsl(0, 0%, 20%);
+   
+}
+
+a{
+    color: var(--title-color);
+    text-decoration: none;
+}
+
+body{
+    background: var(--body-bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_box{
+    width: clamp(15vw,18vw,600px);
+    height: auto;
+    background: var(--box-color);
+    text-align: center;
+    padding-block: clamp(0.3em, 1em, 1em);
+    padding-inline: clamp(0.3em, 1.2em, 2em);
+    /* flex-shrink: 0; */
+}
+
+.social_box img{
+    width: clamp(1vw,4.5vw,10vw);
+    height:auto;
+    border: 2px solid var(--box-color);
+    border-radius: 5em;
+    object-fit: cover;
+
+}
+
+
+.social_box h1{
+    color: var(--title-color);
+    font-size: 1.2em;
+}
+
+
+.one{
+    margin-block-start: clamp(0.3em, 0.5em, 1.5em);
+    color: var(--active-color);
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.two{
+    margin-block-start: clamp(0.3em, 1.3em,1.5em);
+    color: var(--title-color);
+    font-size: 0.6em;
+}
+
+
+
+
+
+
+.social_links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-block-start: clamp(0.2em, 0.7em, 1em);
+}
+
+
+.social_links a{
+    font-size: 0.7em;
+    color: var(--links-color);
+    font-weight: 700;
+    background: var(--links-box-color);
+    padding: clamp(1em, 1vw, 0.5em);
+    border: 1px solid var(--links-box-color);
+    border-radius: 1em;
+}
+
+.social_links a:hover,a:active{
+    background: var(--active-color);
+    cursor: pointer;
+    color: var(--box-color);
+}
+
+
+/* For Smaller Screens */
+@media(max-width:768px){
+    .social_box{
+        width: clamp(60vw,25vw,600px);
+    }
+
+    .social_box img{
+        width: clamp(5vw, 12vw, 15vw);
+        height: auto;
+    }
+}
+
